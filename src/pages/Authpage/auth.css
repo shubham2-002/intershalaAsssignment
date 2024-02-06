@@ -1,0 +1,41 @@
+.login-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.emailInput {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid gray;
+  padding: 8px 4px;
+
+}
+.passwordInput{
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid gray;
+  padding: 8px 4px;
+}
+.googleSignIn {
+  padding: 8px;
+  width: 100%;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 1px solid #6d52ff;
+  background-color: #fff;
+}
+
+.signIn {
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  background-color: #6d52ff;
+  color: #fff;
+  padding: 8px;
+  width: 100%;
+}

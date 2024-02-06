@@ -1,0 +1,53 @@
+.weather-container {
+  height: 100vh;
+  width: 30%;
+  height: 10%;
+  padding: 20px;
+  background-color: #231767;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  border-radius: 12px;
+  position: relative;
+  left: 30%;
+}
+.weather-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.weather-data > img {
+  width: 100%;
+}
+.searchbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.searchbox > input {
+  border-radius: 4px;
+  padding: 8px;
+  border: none;
+  background-color: rgb(241, 241, 241);
+}
+.searchbox > button {
+  border-radius: 20%;
+  background-color: #fff;
+}
+.stats {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+.loginbtn {
+  width: 90%;
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
