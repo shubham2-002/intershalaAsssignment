@@ -28,7 +28,7 @@ const List = () => {
     const querySnapshot = await getDocs(collection(db, "users"));
     querySnapshot.forEach((doc) => {
       list.push({ id: doc.id, ...doc.data() });
-      console.log(doc.id, " => ", doc.data());
+  
     });
     SetData(list);
   };
@@ -45,7 +45,7 @@ const List = () => {
 
     if (userDoc.exists()) {
       const currentuser = userDoc.data().status;
-      console.log(currentuser);
+    
       const newStatus = currentuser === "active" ? "inactive" : "active";
 
       await updateDoc(userDocRef, {
@@ -54,6 +54,7 @@ const List = () => {
     }
     toast.success('Status Chnage Reload to View')
   };
+
 
   const handelSignOut=()=>{
     signOut(auth).then(() => {

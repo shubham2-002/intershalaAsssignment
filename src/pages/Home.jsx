@@ -19,9 +19,9 @@ const Home = () => {
       }&q=${city}&aqi=no`
     );
     const data = await response.json();
-    console.log(data);
+
     setWData(data);
-    console.log(Wdata);
+   
   };
   useEffect(() => {
     fetchdata();

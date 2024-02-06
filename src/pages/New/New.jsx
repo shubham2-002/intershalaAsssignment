@@ -18,7 +18,7 @@ const New = () => {
       ...prevData,
       [name]: name === "file" ? files[0] : value,
     }));
-    console.log(data);
+   
   };
 
   const uploadFile = () => {
@@ -45,7 +45,7 @@ const New = () => {
       (error) => {},
       () => {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-          console.log("File available at", downloadURL);
+    
           Setdata((prev)=>({...prev, img:downloadURL}))
         });
       }
@@ -61,8 +61,7 @@ const New = () => {
     });
     toast.success('User Added ')
     navigate("/users")
-    console.log("send");
-    console.log(res.id);
+   
   };
 
   useEffect(() => {

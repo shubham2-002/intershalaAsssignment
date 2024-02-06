@@ -23,7 +23,7 @@ const Signin = () => {
           // Signed in
           const user = userCredential.user;
           // ...
-          console.log(user);
+       
           navigate("/users");
         })
         .catch((error) => {
@@ -31,29 +31,25 @@ const Signin = () => {
           const errorMessage = error.message;
         });
     } catch (e) {
-      console.log(e);
+  
     }
   };
 
   const siginGoogle = () => {
     const provider = new GoogleAuthProvider();
-    const auth = getAuth();
+    
+  
     signInWithPopup(auth, provider)
       .then((result) => {
         const credential = GoogleAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
-
-        const user = result.user;
-
+               
         navigate("/users");
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-
-        const email = error.customData.email;
-        const credential = GoogleAuthProvider.credentialFromError(error);
-        // ...
+      
+        console.error("Google Sign-In Error:", errorCode, errorMessage);
       });
   };
 
@@ -79,10 +75,11 @@ const Signin = () => {
           <button className="signIn" type="submit">
             Sign In
           </button>
-          <button className="googleSignIn" onClick={siginGoogle}>
+        
+        </form>
+        <button type="" className="googleSignIn" onClick={siginGoogle}>
             Sign In With Google 
           </button>
-        </form>
       </div>
     </div>
   );
